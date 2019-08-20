@@ -1,0 +1,10 @@
+{
+	"name": "no-u",
+	"version": "2.0.0",
+	"description": "Responds to \"no u\" with an Uno reverse card",
+	"main": "bot.js",
+	"author": "Megidon't#0413",
+	"dependencies": {
+		"discord.js": "^11.5.1"
+	}
+}
