@@ -84,11 +84,15 @@ function getLastAuthorID(message){
 
 	var id = message.channel.fetchMessages({limit: 50}).then(function(messages){
 
-		var Filtered = firstFiltered.filter(msg => !(msg.author.id == bot.user.id || msg.author.id == message.author.id || msg.createdTimestamp > message.createdTimestamp));
+		var Filtered = messages.filter(msg => !(msg.author.id == bot.user.id || msg.author.id == message.author.id || msg.createdTimestamp > message.createdTimestamp));
 
 		if(Filtered.first()){
 
 			return Filtered.first().author.id;
+
+		}else{
+
+			return bot.user.id;
 
 		}
 
